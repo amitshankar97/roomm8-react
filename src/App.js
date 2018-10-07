@@ -8,6 +8,9 @@ import {
 
 import Home from './components/home';
 import SignUp from './components/signUp';
+import Profile from './components/profile/profile';
+import SignIn from './components/signIn/signIn';
+import SearchUsers from './components/searchUsers';
 
 class App extends Component {
   render() {
@@ -18,6 +21,9 @@ class App extends Component {
 
           <Route exact path="/" component={Home} />
           <Route path="/SignUp" component={SignUp} />
+          <Route path="/SignIn" component={SignIn} />
+          <Route path="/Profile" component={Profile} />
+          <Route path="/SearchUsers" component={SearchUsers} />
         </div>
       </Router>
     );

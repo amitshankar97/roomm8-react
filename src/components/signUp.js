@@ -1,16 +1,35 @@
 import React, { Component } from 'react';
-import {
-  BrowserRouter as Router,
-  Route
-} from 'react-router-dom'
+import { connect } from 'react-redux';
+import FacebookLogin from 'react-facebook-login'
 
+const responseFacebook = (response, obj) => {
+  console.log(response);
+  obj.props.history.push('/SearchUsers');
+}
 
 class SignUp extends Component {
+
+  constructor(props) {
+    super(props);
+  }
+
   render() {
     return (
-        <div></div>
+      <div>
+        <FacebookLogin
+          appId="272999636649657"
+          autoLoad={true}
+          fields="name,email,picture"
+          callback={e=>responseFacebook(e, this)} />
+      </div>
     );
   }
 }
 
-export default SignUp;
+const mapStateToProps = state => {
+  return {
+      state: state
+  }
+}
+
+export default connect(mapStateToProps)(SignUp);
