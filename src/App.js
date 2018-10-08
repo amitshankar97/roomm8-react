@@ -10,7 +10,7 @@ import Home from './components/home';
 import SignUp from './components/signUp';
 import Profile from './components/profile/profile';
 import SignIn from './components/signIn/signIn';
-import SearchUsers from './components/searchUsers';
+import SearchUsers from './components/searchUsers/searchUsers';
 
 class App extends Component {
   render() {

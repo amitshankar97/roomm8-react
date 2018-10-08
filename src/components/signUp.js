@@ -9,10 +9,6 @@ const responseFacebook = (response, obj) => {
 
 class SignUp extends Component {
 
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <div>

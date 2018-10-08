@@ -1,10 +1,6 @@
 import { combineReducers } from 'redux'
-
-let tempReducer = (state = [], action) => {
-    return state;
-}
-
+import search from './search';
 
 export default combineReducers({
-    tempReducer
+    search
 });

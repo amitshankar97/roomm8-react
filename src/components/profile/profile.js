@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './roommate-profile.css';
-import { Link } from 'react-router-dom'
 import InstagramLogo from '../../assets/logos/instagram.png';
 import FacebookLogo from '../../assets/logos/facebook.png';
 import EmailLogo from '../../assets/logos/email.png';
