@@ -31,12 +31,12 @@ class SignUp extends Component {
             <br /> <br />
             <div className="btn-group">
                 <a className='btn btn-danger disabled'><i className="fa fa-google-plus social-icon"></i></a>
-                <a className='btn btn-danger social-link' href=''> Sign up with Google</a>
+                <a className='btn btn-danger social-link' href=''> Login with Google</a>
             </div>
             <br /> <br />
             <div className="btn-group">
                 <a className='btn btn-info disabled'><i className="fa fa-twitter social-icon"></i></a>
-                <a className='btn btn-info social-link' href=''> Sign up with Twitter</a>
+                <a className='btn btn-info social-link' href=''> Login with Twitter</a>
             </div>
             </div>
             <br /> <br />
