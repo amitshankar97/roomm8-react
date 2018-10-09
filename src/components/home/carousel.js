@@ -4,6 +4,9 @@ import {
     Route
   } from 'react-router-dom'
 import { Link } from 'react-router-dom';
+import Communication from './pictures/communication.jpg'
+import Finding from './pictures/finding.png'
+import Room from './pictures/room.png'
 
 
 class Carousel extends Component {
@@ -19,7 +22,7 @@ class Carousel extends Component {
                     </ol>
                     <div className="carousel-inner">
                         <div className="carousel-item">
-                            <img className="img-fluid" src="http://www.clker.com/cliparts/7/9/5/e/14523763661619054672night-in-the-city-21851292200793awk.jpg" alt="First slide" />
+                            <img className="first-slide" src={Room} alt="First slide" />
                             <div className="container">
                                 <div className="carousel-caption text-left">
                                     <h1>Have a room you need filled? </h1>
@@ -29,7 +32,7 @@ class Carousel extends Component {
                             </div>
                         </div>
                         <div className="carousel-item">
-                            <img className="img-fluid" src="http://www.csm.edu/sites/default/files/styles/interior_slider_image/public/large-ad-image/Walk%20Tall%20Honors%20Program%20Slider.jpg?itok=-9oVBT2q" alt="Second slide" />
+                            <img className="third-slide" src={Communication} alt="Second slide" />
                             <div className="container">
                                 <div className="carousel-caption">
                                     <h1>Communication is Key</h1>
@@ -41,10 +44,10 @@ class Carousel extends Component {
                             </div>
                         </div>
                         <div className="carousel-item active">
-                            <img className="third-slide" src="https://media.equityapartments.com/images/c_crop,x_0,y_0,w_1920,h_1080/c_fill,w_1920,h_1080/q_80/2366-19/promenade-at-town-center-apartments-exterior.jpg" alt="Third slide" />
+                            <img className="third-slide" src={Finding} alt="Third slide" />
                             <div className="container">
                                 <div className="carousel-caption text-right">
-                                    <h1>Finding the Perfect roomm8</h1>
+                                    <h1>Find the Perfect roomm8</h1>
                                     <p>Seach your local area for that perfect roomm8</p>
                                     <p><Link className="btn btn-lg btn-primary" to="/SignUp" role="button">Sign Up</Link></p>
                                 </div>
