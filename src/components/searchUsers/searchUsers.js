@@ -19,8 +19,8 @@ class SearchUsers extends Component {
         )
 
         return (
-            <div style={{marginTop: '20px'}}>
-                <ul>{mappedUsers}</ul>
+            <div style={{marginTop: '20px', padding: "10px"}}>
+                <ul style={{paddingLeft: "0px"}}>{mappedUsers}</ul>
             </div>
         );
     }

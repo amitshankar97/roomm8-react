@@ -1,6 +1,8 @@
 import { connect } from 'react-redux';
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import './navbar.css';
+import Logo from '../assets/logos/roomm8-white-logo-cropped.png';
 
 class Navbar extends Component {
 
@@ -9,7 +11,7 @@ class Navbar extends Component {
             <div>
                 <header>
                     <nav className="navbar navbar-expand-md navbar-dark fixed-top bg-primary">
-                        <Link className="navbar-brand lead" to="/">roomm8</Link>
+                        <Link className="navbar-brand link-logo" to="/"><img src={Logo} className="nav-logo" alt="roomm8 logo" /></Link>
                         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                             <span className="navbar-toggler-icon"></span>
                         </button>
@@ -25,10 +27,7 @@ class Navbar extends Component {
 
                             <ul className="navbar-nav ml-auto">
                                 <li className="nav-item active">
-                                    <Link className="nav-link" to="/SignUp">Sign Up</Link>
-                                </li>
-                                <li className="nav-item active">
-                                    <Link className="nav-link" to="/SignIn">Sign In</Link>
+                                    <Link className="nav-link" to="/SignUp">Login</Link>
                                 </li>
                             </ul>
                         </div>
