@@ -1,3 +1,9 @@
+roomm8-react
+-------
+
+[![Build Status](https://amitshankar.visualstudio.com/roomm8/_apis/build/status/roomm8-react)](https://amitshankar.visualstudio.com/roomm8/_build/latest?definitionId=7)
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
