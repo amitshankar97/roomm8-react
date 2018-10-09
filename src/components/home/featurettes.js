@@ -28,7 +28,6 @@ class Featurettes extends Component {
                     <div className="col-md-7 order-md-2">
                         <h2 className="featurette-heading">Have a room you need filled? <span className="text-muted">Post a listing.</span></h2>
                         <p className="lead">Whether you need to share a room or have a vacant room, let others know you have a room available.</p>
-                        <Link className="btn btn-lg btn-primary" to="/SignUp" role="button">Sign Up</Link>
                     </div>
                     <div className="col-md-5 order-md-1">
                         <img className="featurette-image  img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500" style={{ width: '100%' }} src={Bed} data-holder-rendered="true" />
@@ -41,7 +40,6 @@ class Featurettes extends Component {
                     <div className="col-md-7">
                         <h2 className="featurette-heading">Communication is Key. <span className="text-muted">Talk to each other.</span></h2>
                         <p className="lead">Interested in becoming roomm8s? Why not communicate with each other by sending a message or using our chat feature.</p>
-                        <Link className="btn btn-lg btn-primary" to="/SignUp" role="button">Sign Up</Link>
                     </div>
                     <div className="col-md-5">
                         <img className="featurette-image" data-src="holder.js/500x500/auto" alt="500x500" style={{ width: '100%' }} src={Chatting} data-holder-rendered="true" />

@@ -38,7 +38,6 @@ class Carousel extends Component {
                                     <h1>Communication is Key</h1>
                                     <p>Send messages or chat with potentional roomm8s</p>
                                     <p>
-                                    <Link className="btn btn-lg btn-primary" to="/SignUp" role="button">Sign Up</Link>
                                     </p>
                                 </div>
                             </div>
@@ -49,7 +48,6 @@ class Carousel extends Component {
                                 <div className="carousel-caption text-right">
                                     <h1>Find the Perfect roomm8</h1>
                                     <p>Seach your local area for that perfect roomm8</p>
-                                    <p><Link className="btn btn-lg btn-primary" to="/SignUp" role="button">Sign Up</Link></p>
                                 </div>
                             </div>
                         </div>
