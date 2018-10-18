@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchUsers } from '../../actions/searchActions';
 import UserCard from './userCard';
-
+import SearchBar from './searchBar';
+import Filters from './filters';
 
 class SearchUsers extends Component {
     constructor(props) {
@@ -19,8 +20,14 @@ class SearchUsers extends Component {
         )
 
         return (
-            <div style={{marginTop: '20px', padding: "10px"}}>
-                <ul style={{paddingLeft: "0px"}}>{mappedUsers}</ul>
+            <div>
+                
+                <SearchBar />
+                <Filters />
+                
+                <div style={{marginTop: '20px', padding: "10px"}}>
+                    <ul style={{paddingLeft: "0px"}}>{mappedUsers}</ul>
+                </div>
             </div>
         );
     }

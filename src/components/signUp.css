@@ -6,6 +6,8 @@
 
 .social-link {
     width: 12em;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
 }
 
 .sign-up-container {
