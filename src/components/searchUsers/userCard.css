@@ -1,0 +1,42 @@
+.user-card {
+    border: 1px solid rgba(0, 0, 0, .125);
+    border-radius: 6px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: rgba(0,0,0,.03);
+    margin-bottom: 10px;
+}
+
+.align {
+    padding-left: 0;
+}
+
+cite {
+    font-style: normal;
+}
+
+.glyphicon {
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
+small {
+    display: block;
+    line-height: 1.428571429;
+    color: #999;
+}
+
+hr {
+    margin-top: 3px;
+    margin-bottom: 4px;
+}
+
+a {
+    margin-top: 10px;
+}
+
+.img-rounded {
+    border-radius: 50%;
+    width: 100%;
+    
+}

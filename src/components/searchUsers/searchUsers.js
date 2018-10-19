@@ -23,10 +23,16 @@ class SearchUsers extends Component {
             <div>
                 
                 <SearchBar />
-                <Filters />
-                
-                <div style={{marginTop: '20px', padding: "10px"}}>
-                    <ul style={{paddingLeft: "0px"}}>{mappedUsers}</ul>
+                <div className="container">
+
+                    <div className="row">
+                        <Filters />
+                        <div className="col-sm-8">
+                            <div style={{marginTop: '20px', padding: "10px"}}>
+                                <ul style={{paddingLeft: "0px"}}>{mappedUsers}</ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         );
