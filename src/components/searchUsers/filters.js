@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
+import './filters.css';
 
 class Filters extends Component {
 
     render() {
         return (
             <aside className="col-sm-4" >
-                <div className="card" style={{ marginTop: '32px'}}>
+                <div className="card">
                     <article className="card-group-item">
                         <header className="card-header">
                             <h6 className="title">Cleanliness </h6>
@@ -30,7 +31,8 @@ class Filters extends Component {
 			                </div> 
 		                </div>
 	                </article> 
-                                            
+                </div>
+                <div className="card">
 	                <article className="card-group-item">
                         <header className="card-header">
                             <h6 className="title">Social Habits </h6>
@@ -55,7 +57,8 @@ class Filters extends Component {
 			                </div> 
 		                </div>
                     </article>
-
+                </div>
+                <div className="card">
                     <article className="card-group-item">
                         <header className="card-header">
                             <h6 className="title">Smoking </h6>

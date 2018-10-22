@@ -1,0 +1,15 @@
+.card-header {
+    /*background-color: #FFF7F8;*/
+}
+
+.card:first-child {
+    margin-top: 32px;
+}
+
+.card {
+    margin-top: 20px;
+}
+
+.title {
+    margin-bottom: 0px;
+}

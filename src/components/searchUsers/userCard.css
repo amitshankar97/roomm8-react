@@ -3,9 +3,12 @@
     border-radius: 5px;
     padding-top: 30px;
     padding-bottom: 30px;
-    background-color: rgba(0,0,0,.03);
-    margin-bottom: 10px;
+    background-color: rgba(0, 0, 0, 0.03);      
+    margin-bottom: 20px;
+    color: black;
 }
+
+/*possible background colors: #FFF7F8; #EDECF0;*/
 
 .align {
     padding-left: 0;
