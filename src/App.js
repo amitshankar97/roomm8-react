@@ -11,6 +11,9 @@ import SignUp from './components/signUp';
 import Profile from './components/profile/profile';
 import SignIn from './components/signIn/signIn';
 import SearchUsers from './components/searchUsers/searchUsers';
+import SignUpPage from './components/newProfile/SignUpPage';
+import Preferences from './components/newProfile/Preferences';
+
 
 class App extends Component {
   render() {
@@ -24,6 +27,8 @@ class App extends Component {
           <Route path="/SignIn" component={SignIn} />
           <Route path="/Profile" component={Profile} />
           <Route path="/SearchUsers" component={SearchUsers} />
+          <Route path="/SignUpPage" component={SignUpPage} />
+          <Route path="/Preferences" component={Preferences} />
         </div>
       </Router>
     );
