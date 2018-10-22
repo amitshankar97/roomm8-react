@@ -28,7 +28,7 @@ class SearchUsers extends Component {
                     <div className="row">
                         <Filters />
                         <div className="col-sm-8">
-                            <div style={{marginTop: '20px', padding: "10px"}}>
+                            <div style={{marginTop: '21px', padding: "10px"}}>
                                 <ul style={{paddingLeft: "0px"}}>{mappedUsers}</ul>
                             </div>
                         </div>

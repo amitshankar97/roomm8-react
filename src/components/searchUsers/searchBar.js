@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './searchBar.css';
+import '../../../node_modules/font-awesome/css/font-awesome.min.css';
 
 class SearchBar extends Component {
 
@@ -12,7 +13,7 @@ class SearchBar extends Component {
                         <form className="card card-sm">
                             <div className="card-body row no-gutters align-items-center">
                                 <div className="col-auto">
-                                    <i className="fas fa-search h4 text-body"></i>
+                                    <i className="fa fa-search h4 text-body"></i>
                                 </div>
 
                                 <div className="col">
