@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux'
 import search from './search';
-import { reducer as formReducer } from 'redux-form'
+import user from './user'
 
 export default combineReducers({
     search,
-    form: formReducer
+    user
 });
