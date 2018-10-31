@@ -16,7 +16,13 @@ export function userSaveProfile(data) {
     return function (dispatch) {
         //mock success
         dispatch(userSaveProfileSuccess({ Id: Math.random(), firstName: 'bob', lastName: 'barker', email: data.email }));
-        browserHistory.push('/SaveProperty');
+        console.log(data);
+        if(data.hasProperty === "true"){
+            browserHistory.push('/SaveProperty');
+        }
+        else{
+            browserHistory.push('/Profile');
+        }
         /*
         return fetch(`${BASE_URL}/user/signup`,{
             method: 'post',

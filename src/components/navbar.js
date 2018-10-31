@@ -37,7 +37,6 @@ class Navbar extends Component {
                                     <Link className="nav-link" to="/Profile">MyProfile</Link>
                                 </li>
                                 <li className="nav-item active">
-                                    {user.info = null}
                                     <Link className="nav-link" to="/">Log out</Link>
                                 </li>
                             </ul>

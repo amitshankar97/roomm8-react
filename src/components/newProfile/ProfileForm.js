@@ -20,6 +20,7 @@ class ProfileForm extends Component {
             budget: "",
             smoke: "",
             drink: "",
+            hasProperty: false,
             errors: {}
         }
         this.onChange = this.onChange.bind(this);
@@ -237,7 +238,19 @@ class ProfileForm extends Component {
                                     className="form-control"
                                 />
                             </div>
-                            <br />
+                        </div>
+                        <div className="form-group">
+                            <label>Do you have room to rent?</label>
+                            <div>
+                                <div className="form-check form-check-inline">
+                                    <input className="form-check-input" type="radio" name="hasProperty" id="inlineRadio13" value={true} onChange={this.onChange} />
+                                    <label className="form-check-label" htmlFor="inlineRadio13">Yes</label>
+                                </div>
+                                <div className="form-check form-check-inline">
+                                    <input className="form-check-input" type="radio" name="hasProperty" id="inlineRadio14" value={false} onChange={this.onChange} />
+                                    <label className="form-check-label" htmlFor="inlineRadio14">No</label>
+                                </div>
+                            </div>
                         </div>
                         <div className="form-group">
                             <button className="btn btn-primary btn-lg">
