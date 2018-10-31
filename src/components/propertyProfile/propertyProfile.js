@@ -112,16 +112,16 @@ class PropertyProfile extends Component {
                             <div className="row">
 
                                 <div className="col-md-3">
-                                    <img src={SamplePicture} className="img-fluid userImg" alt="User Photo" />
-                                    <a href="#"> See Profile </a>
+                                    <img src={SamplePicture} className="img-fluid userImg" alt="user" />
+                                    <a href="/Profile"> See Profile </a>
                                 </div>
                                 <div className="col-md-3">
-                                    <img src={SamplePicture} className="img-fluid userImg" alt="User Photo" />
-                                    <a href="#"> See Profile </a>
+                                    <img src={SamplePicture} className="img-fluid userImg" alt="user" />
+                                    <a href="/Profile"> See Profile </a>
                                 </div>
                                 <div className="col-md-3">
-                                    <img src={SamplePicture} className="img-fluid userImg" alt="User Photo" />
-                                    <a href="#"> See Profile </a>
+                                    <img src={SamplePicture} className="img-fluid userImg" alt="user"/>
+                                    <a href="/Profile"> See Profile </a>
                                 </div>
                             </div>
                             <br />
@@ -165,7 +165,7 @@ class PropertyProfile extends Component {
                                     </div>
                                     <div className="form-check form-check-inline disabled">
                                         <label className="form-check-label">
-                                        <input className="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option5" checked/> 5
+                                        <input className="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option5"/> 5
                                         </label>
                                     </div>
                                     <div className="form-group">

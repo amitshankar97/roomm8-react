@@ -6,9 +6,7 @@ import SearchBar from './searchBar';
 import Filters from './filters';
 
 class SearchUsers extends Component {
-    constructor(props) {
-        super(props);
-    }
+
 
     componentDidMount() {
         this.props.fetchUsers();

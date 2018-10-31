@@ -8,7 +8,7 @@ class SignIn extends Component {
     render() {
         return (
             <div className="text-center sign-in-container">
-                <img src={Logo} height="30%" width="30%" />
+                <img src={Logo} height="30%" width="30%" alt="roomm8 logo"/>
                 <form className="form-signin">
                     
                     <h1 className="h3 mb-3 font-weight-normal">Please sign in</h1>

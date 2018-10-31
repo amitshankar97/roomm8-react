@@ -37,7 +37,7 @@ class UserCard extends Component {
                             <hr />
                             Cleanliness: {this.props.user.cleanliness}
                         </ul>
-                        <a href="#" className="btn btn-primary">See Profile</a>
+                        <a href="/Profile" className="btn btn-primary">See Profile</a>
                     </div>
                 </div>
             </div>
