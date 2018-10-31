@@ -22,9 +22,6 @@ class Navbar extends Component {
                                 <li className="nav-item active">
                                     <Link className="nav-link" to="/SearchUsers">Search</Link>
                                 </li>
-                                <li className="nav-item active">
-                                    <Link className="nav-link" to="/Profile">Profile</Link>
-                                </li>
                             </ul>
                             {!user.info ?
                             <ul className="navbar-nav ml-auto">
@@ -36,8 +33,8 @@ class Navbar extends Component {
                                 </li>
                             </ul> :
                             <ul className="navbar-nav ml-auto">
-                                <li>
-                                    {user.info.email}
+                                <li className="nav-item active">
+                                    <Link className="nav-link" to="/Profile">MyProfile</Link>
                                 </li>
                                 <li className="nav-item active">
                                     {user.info = null}
