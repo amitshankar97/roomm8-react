@@ -23,6 +23,9 @@ class Navbar extends Component {
                                 <li className="nav-item active">
                                     <Link className="nav-link" to="/Profile">Profile</Link>
                                 </li>
+                                <li className="nav-item active">
+                                    <Link className="nav-link" to="/PropertyProfile">Property</Link>
+                                </li>
                             </ul>
 
                             <ul className="navbar-nav ml-auto">
