@@ -34,8 +34,7 @@ class PropertyProfile extends Component {
             return null;
         }
 
-        console.log(property.geometry.location);
-
+        
         return (
             <div className="container emp-profile">
                 <form>

@@ -103,3 +103,17 @@ export function fetchProperties(lat, lon) {
         .catch(err => dispatch(requestPropertiesError(err)))
     }
 }
+
+/**
+ * Marker Logic
+ */
+
+export const SELECT_MARKER = 'SELECT_MARKER';
+
+// select markers based on the index
+export function selectMarker(key) {
+    return {
+        type: SELECT_MARKER,
+        key
+    }
+}
