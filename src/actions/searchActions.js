@@ -1,7 +1,11 @@
 import fetch from 'cross-fetch'
 
 const BASE_URL = 'https://roomm8-amit.azurewebsites.net'
+const API_URL = 'https://roomm8-amit.azurewebsites.net/api'
 
+/**
+ * Users Actions
+ */
 export const REQUEST_USERS = 'REQUEST_USERS';
 
 export function requestUsers() {
@@ -45,10 +49,57 @@ export function fetchUsers() {
                 }
             )
             .then(json => {
+                setTimeout(dispatch, 3000, requestUsersSuccess(json))
                 console.log(json);
-                dispatch(requestUsersSuccess(json))
+                // dispatch(requestUsersSuccess(json))
             }
             )
             .catch(err => dispatch(requestUsersError(err)))
+    }
+}
+
+
+
+
+
+/**
+ * Properties Actions
+ */
+export const REQUEST_PROPERTIES = 'REQUEST_PROPERTIES';
+export const REQUEST_PROPERTIES_SUCCESS = 'REQUEST_PROPERTIES_SUCCESS';
+export const REQUEST_PROPERTIES_ERROR = 'REQUEST_PROPERTIES_ERROR';
+
+export function requestProperties() {
+    return {
+        type: REQUEST_PROPERTIES
+    }
+}
+export function requestPropertiesSuccess(res) {
+    console.log(res);
+    return {
+        type: REQUEST_PROPERTIES_SUCCESS,
+        json: res
+    }
+}
+export function requestPropertiesError(err) {
+    return {
+        type: REQUEST_PROPERTIES_ERROR,
+        err
+    }
+}
+
+
+export function fetchProperties(lat, lon) {
+
+    return function (dispatch) {
+        dispatch(requestProperties())
+
+        fetch(`${API_URL}/properties?lat=${lat}&lon=${lon}`)
+        .then(function(response) {
+            return response.json();
+        }).then(function(data) {
+            setTimeout(dispatch, 3000, requestPropertiesSuccess(data))
+        })
+        .catch(err => dispatch(requestPropertiesError(err)))
     }
 }

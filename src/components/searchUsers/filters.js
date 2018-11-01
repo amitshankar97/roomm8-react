@@ -5,7 +5,7 @@ class Filters extends Component {
 
     render() {
         return (
-            <aside className="col-sm-4" >
+            <aside className="col-sm-12 col-md-4" >
                 <div className="card">
                     <article className="card-group-item">
                         <header className="card-header">
@@ -26,7 +26,7 @@ class Filters extends Component {
                                 <div className="custom-control custom-checkbox">
                                     <span className="float-right badge badge-light round">36</span>
                                     <input type="checkbox" className="custom-control-input" id="Check3" />
-                                    <label className="custom-control-label" htmlFor="Check3">extreamely neat</label>
+                                    <label className="custom-control-label" htmlFor="Check3">extremely neat</label>
                                 </div> 
 			                </div> 
 		                </div>
