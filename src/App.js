@@ -24,7 +24,7 @@ class App extends Component {
           <Route path="/SignUp" component={SignUp} />
           <Route path="/SignIn" component={SignIn} />
           <Route path="/Profile" component={Profile} />
-          <Route path="/PropertyProfile" component={PropertyProfile} />
+          <Route path="/PropertyProfile/:propertyID" component={PropertyProfile} />
           <Route path="/SearchUsers" component={SearchUsers} />
         </div>
       </Router>

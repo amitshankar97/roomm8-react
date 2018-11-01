@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { withScriptjs, withGoogleMap, GoogleMap, Marker } from "react-google-maps";
+import { withScriptjs, withGoogleMap, GoogleMap, Marker, InfoWindow } from "react-google-maps";
 import ContentLoader from 'react-content-loader';
 import { fetchProperties } from '../../../actions/searchActions'
+import { Link } from 'react-router-dom';
+const { compose, withProps, withStateHandlers } = require("recompose");
 
 const Loader = props => (
   <div className="card">
@@ -21,6 +23,64 @@ const Loader = props => (
 
 const GOOGLE_API_KEY = "AIzaSyBPsMu2UJW4WKemA-_glrl6Bh5NyS3SIj0";
 
+
+// const MapWithInfoWindow = compose(
+//   withStateHandlers(() => ({
+//     isOpen: false,
+//   }), {
+//     onToggleOpen: ({ isOpen }) => () => ({
+//       isOpen: !isOpen,
+//     })
+//   }),
+//   withScriptjs,
+//   withGoogleMap
+// )(props =>
+
+//   <GoogleMap
+//         defaultZoom={8}
+//         defaultCenter={{ lat: 32.22, lng: -110.97 }}
+//     >
+
+//     {
+//       props.properties.length <= 0
+//       ? null
+//       : props.properties.map((prop, i) => {
+//         return (
+//           <Marker
+//           position = {{ lat: prop.geometry.location.lat, lng: prop.geometry.location.lng }}
+//           key = {i}
+//           onClick={props.onToggleOpen}
+//           >
+//           {
+//             props.isOpen &&
+//             <InfoWindow onCloseClick={props.onToggleOpen}>
+//               {prop.name}
+//             </InfoWindow>
+//           }
+
+//           </Marker>
+//         );
+//       })
+//     }
+//     </GoogleMap>
+
+
+//   // <GoogleMap
+//   //   defaultZoom={8}
+//   //   defaultCenter={{ lat: -34.397, lng: 150.644 }}
+//   // >
+//   //   <Marker
+//   //     position={{ lat: -34.397, lng: 150.644 }}
+//   //     onClick={props.onToggleOpen}
+//   //   >
+//   //     {props.isOpen && <InfoWindow onCloseClick={props.onToggleOpen}>
+//   //       <FaAnchor />
+//   //     </InfoWindow>}
+//   //   </Marker>
+//   // </GoogleMap>
+// );
+
+
 const MyMapComponent = withScriptjs(withGoogleMap((props) =>
     <GoogleMap
         defaultZoom={12}
@@ -35,7 +95,17 @@ const MyMapComponent = withScriptjs(withGoogleMap((props) =>
           <Marker
           position = {{ lat: prop.geometry.location.lat, lng: prop.geometry.location.lng }}
           key = {i}
-          />
+          >
+          <InfoWindow>
+            <div align="center">
+              <div>{prop.name}</div><br />
+              <div>Rating: {prop.rating}</div><br />
+              <Link to={'/PropertyProfile/' + prop.id}>
+                <button className="btn btn-primary">View Property</button>
+              </Link>
+            </div>
+          </InfoWindow>
+          </Marker>
         );
       })
     }
@@ -44,15 +114,14 @@ const MyMapComponent = withScriptjs(withGoogleMap((props) =>
 
 export class Map extends Component {
 
-  componentDidMount() {
-    if(this.props.state.search.properties.length <= 0) {
-      this.props.fetchProperties(32.22, -110.974);
-    }
-  }
+  // componentDidMount() {
+  //   if(this.props.state.search.properties.length <= 0) {
+  //     this.props.fetchProperties(32.22, -110.974);
+  //   }
+  // }
 
   render() {
-    console.log(this.props.state);
-    if(this.props.state.search.properties.length <= 0) {
+    if(this.props.state.search.isFetching) {
       return <Loader />;
     }
 

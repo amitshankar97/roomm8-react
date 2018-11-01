@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './propertyProfile.css';
-import SampleApartment from './sampleApartment.jpg';
 import SamplePicture from '../profile/sample_profile_picture.jpg';
 import Comments from './comments';
 import { withScriptjs, withGoogleMap, GoogleMap, Marker } from "react-google-maps";
@@ -10,22 +9,44 @@ const GOOGLE_API_KEY = "AIzaSyBPsMu2UJW4WKemA-_glrl6Bh5NyS3SIj0";
 
 const MyMapComponent = withScriptjs(withGoogleMap((props) =>
     <GoogleMap
-        defaultZoom={12}
-        defaultCenter={{ lat: 32.235484, lng: -110.840689 }}
+        defaultZoom={14}
+        defaultCenter={props.markerLocation}
     >
-        <Marker position={{ lat: 32.235484, lng: -110.840689 }} />
+        <Marker position={props.markerLocation} />
     </GoogleMap>
 ))
 
 class PropertyProfile extends Component {
+
     render() {
+        let propID = this.props.match.params.propertyID;
+        var property = {};
+
+        for (let i = 0; i < this.props.state.search.properties.length; i++) {
+            const element = this.props.state.search.properties[i];
+            if (element.id === propID) {
+                property = Object.assign({}, element);
+                property = element;
+            }
+        }
+
+        if (property === {} || property === null || property === undefined) {
+            return null;
+        }
+
+        console.log(property.geometry.location);
+
         return (
             <div className="container emp-profile">
                 <form>
                     <div className="row">
                         <div className="col-md-12">
                             <div className="profile-img">
-                                <img src={SampleApartment} className="img-fluid propertyImg" alt="Property" />
+                                {
+                                    property.photos && property.photos.length > 0
+                                        ? <img src={'https://roomm8-amit.azurewebsites.net/api/getPhoto/' + property.photos[0].photo_reference} className="img-fluid propertyImg" alt="Property" />
+                                        : null
+                                }
                             </div>
                         </div>
                     </div>
@@ -34,10 +55,10 @@ class PropertyProfile extends Component {
                         <div className="col-md-10">
                             <div className="profile-head">
                                 <h5 className="display-4">
-                                    Student Apartment
+                                    {property.name}
                                 </h5>
                                 <h6 className="lead">
-                                    Tucson, AZ
+                                    {property.formatted_address}
                                 </h6>
                                 <hr />
                             </div>
@@ -89,6 +110,7 @@ class PropertyProfile extends Component {
                                         googleMapURL={"https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=" + GOOGLE_API_KEY}
                                         loadingElement={<div style={{ height: `100%` }} />}
                                         containerElement={<div style={{ height: `300px`, marginBottom: `15px` }} />}
+                                        markerLocation={property.geometry.location}
                                         mapElement={<div style={{ height: `100%` }} />}
                                     />
                                 </div>
@@ -120,7 +142,7 @@ class PropertyProfile extends Component {
                                     <a href="/Profile"> See Profile </a>
                                 </div>
                                 <div className="col-md-3">
-                                    <img src={SamplePicture} className="img-fluid userImg" alt="user"/>
+                                    <img src={SamplePicture} className="img-fluid userImg" alt="user" />
                                     <a href="/Profile"> See Profile </a>
                                 </div>
                             </div>
@@ -133,10 +155,10 @@ class PropertyProfile extends Component {
 
                             <div className="row">
                                 <div className="col-md-9">
-                                    
+
                                     <div className="form-group">
-                                    <label htmlFor="comment">Name:</label>
-                                    <input type="text" className="form-control" id="formGroupExampleInput" placeholder="Name" />
+                                        <label htmlFor="comment">Name:</label>
+                                        <input type="text" className="form-control" id="formGroupExampleInput" placeholder="Name" />
                                     </div>
                                     <div className="form-check form-check-inline">
 
@@ -144,36 +166,36 @@ class PropertyProfile extends Component {
                                     </div>
                                     <div className="form-check form-check-inline">
                                         <label className="form-check-label">
-                                        <input className="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"/> 1
+                                            <input className="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" /> 1
                                         </label>
                                     </div>
                                     <div className="form-check form-check-inline">
                                         <label className="form-check-label">
-                                        <input className="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" /> 2
+                                            <input className="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" /> 2
                                         </label>
                                     </div>
                                     <div className="form-check form-check-inline disabled">
                                         <label className="form-check-label">
-                                        <input className="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" /> 3
+                                            <input className="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" /> 3
                                         </label>
                                     </div>
                                     <div className="form-check form-check-inline disabled">
                                         <label className="form-check-label">
-                                        <input className="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4" /> 4
+                                            <input className="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4" /> 4
                                         </label>
 
                                     </div>
                                     <div className="form-check form-check-inline disabled">
                                         <label className="form-check-label">
-                                        <input className="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option5"/> 5
+                                            <input className="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option5" /> 5
                                         </label>
                                     </div>
                                     <div className="form-group">
                                         <label htmlFor="comment">Comment:</label>
                                         <textarea className="form-control" rows="3" id="comment"></textarea>
                                     </div>
-                                        
-                                    
+
+
                                 </div>
                             </div>
                             <div className="row">

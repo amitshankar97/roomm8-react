@@ -75,7 +75,6 @@ export function requestProperties() {
     }
 }
 export function requestPropertiesSuccess(res) {
-    console.log(res);
     return {
         type: REQUEST_PROPERTIES_SUCCESS,
         json: res
@@ -99,6 +98,7 @@ export function fetchProperties(lat, lon) {
             return response.json();
         }).then(function(data) {
             setTimeout(dispatch, 3000, requestPropertiesSuccess(data))
+            // requestPropertiesSuccess(data)
         })
         .catch(err => dispatch(requestPropertiesError(err)))
     }

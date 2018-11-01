@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { fetchUsers } from '../../actions/searchActions';
+import { fetchUsers, fetchProperties } from '../../actions/searchActions';
 import UserCard from './userCard';
 import SearchBar from './searchBar';
 import Filters from './filters';
@@ -21,6 +21,9 @@ class SearchUsers extends Component {
     componentDidMount() {
         if(this.props.state.search.users.length <= 0) {
             this.props.fetchUsers();
+        }
+        if(this.props.state.search.properties.length <= 0) {
+            this.props.fetchProperties(32.22, -110.974);
         }
     }
 
@@ -77,7 +80,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => (
     {
-        fetchUsers: () => dispatch(fetchUsers())
+        fetchUsers: () => dispatch(fetchUsers()),
+        fetchProperties: (lat, lon) => dispatch(fetchProperties(lat, lon))
     }
 )
 
