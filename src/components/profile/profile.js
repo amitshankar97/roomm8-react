@@ -29,11 +29,13 @@ class Profile extends Component {
                                 <img src={SamplePicture} className="rounded-circle" alt="Profile" />
                             </div>
                         </div>
-                        <div className="col-md-6">
+                        <div className="col-md-8">
                             <div className="profile-head">
                                 <h5 className="display-4">
-                                    Amit Shankar
-                                </h5>
+                                    Amit Shankar <a className="btn btn-lg btn-primary" role="button" href="/Chat" style={{ marginTop: '0px'}}>
+                                        <i className="fa fa-comments" style={{ color: 'white' }}></i>
+                                    </a>
+                                </h5> 
                                 <h6 className="lead">
                                     The University of Arizona
                                 </h6>
