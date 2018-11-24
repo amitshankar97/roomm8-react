@@ -99,7 +99,7 @@ class PropertyProfile extends Component {
                                     <label>Location</label>
                                 </div>
                                 <div className="col-md-6">
-                                    <p>1 East Speedway Blvd, Tucson, AZ</p>
+                                    <p>{property.formatted_address}</p>
                                 </div>
                             </div>
                             <div className="row">
@@ -132,16 +132,16 @@ class PropertyProfile extends Component {
                             </div>
                             <div className="row">
 
-                                <div className="col-md-3">
-                                    <img src={SamplePicture} className="img-fluid userImg" alt="user" />
+                                <div className="col-md-3 text-center">
+                                    <img src={SamplePicture} className="img-fluid userImg rounded-circle" alt="user" /><br />
                                     <a href="/Profile"> See Profile </a>
                                 </div>
-                                <div className="col-md-3">
-                                    <img src={SamplePicture} className="img-fluid userImg" alt="user" />
+                                <div className="col-md-3 text-center">
+                                    <img src={SamplePicture} className="img-fluid userImg rounded-circle" alt="user" /><br />
                                     <a href="/Profile"> See Profile </a>
                                 </div>
-                                <div className="col-md-3">
-                                    <img src={SamplePicture} className="img-fluid userImg" alt="user" />
+                                <div className="col-md-3 text-center">
+                                    <img src={SamplePicture} className="img-fluid userImg rounded-circle" alt="user" /><br />
                                     <a href="/Profile"> See Profile </a>
                                 </div>
                             </div>

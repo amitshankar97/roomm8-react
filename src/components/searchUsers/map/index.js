@@ -24,7 +24,7 @@ const GOOGLE_API_KEY = "AIzaSyBPsMu2UJW4WKemA-_glrl6Bh5NyS3SIj0";
 
 const MyMapComponent = withScriptjs(withGoogleMap((props) =>
     <GoogleMap
-        defaultZoom={12}
+        defaultZoom={13}
         defaultCenter={{ lat: 32.22, lng: -110.97 }}
     >
 
@@ -36,22 +36,8 @@ const MyMapComponent = withScriptjs(withGoogleMap((props) =>
           <Marker
           position = {{ lat: prop.geometry.location.lat, lng: prop.geometry.location.lng }}
           key = {i}
-          onClick={this.selectMarker()}
           >
 
-          {
-            i === props.markerIndex
-            ? <InfoWindow>
-              <div align="center">
-                <div>{prop.name}</div><br />
-                <div>Rating: {prop.rating}</div><br />
-                <Link to={'/PropertyProfile/' + prop.id}>
-                  <button className="btn btn-primary">View Property</button>
-                </Link>
-              </div>
-            </InfoWindow>
-            : null
-          }
           <InfoWindow>
             <div align="center">
               <div>{prop.name}</div><br />
