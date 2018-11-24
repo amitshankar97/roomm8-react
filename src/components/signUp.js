@@ -19,7 +19,7 @@ class SignUp extends Component {
             <br /> <br />
             <div>
             <div className="btn-group">
-                <a className='btn btn-primary disabled'><i className="fa fa-facebook social-icon"></i></a>
+                <a className='btn btn-primary disabled link-margin'><i className="fa fa-facebook social-icon"></i></a>
                 
                 <FacebookLogin
                 appId="272999636649657"
