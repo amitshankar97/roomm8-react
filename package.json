@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@pusher/chatkit": "^0.7.18",
     "classnames": "^2.2.6",
+    "connected-react-router": "4.5.0",
     "cross-fetch": "^2.2.2",
     "lodash": "^4.17.11",
     "prop-types": "^15.6.2",
@@ -14,7 +16,6 @@
     "react-redux": "^5.0.7",
     "react-router-dom": "^4.3.1",
     "react-router-redux": "^4.0.8",
-    "connected-react-router": "4.5.0",
     "react-scripts": "1.1.5",
     "react-scripts-plugin-no-minify": "0.3.2",
     "redux": "^4.0.0",

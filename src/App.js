@@ -15,7 +15,7 @@ import SignUpContainer from './components/signUp/SignUpContainer';
 import PropertyFormContainer from './components/newProperty/PropertyFormContainer';
 import ProfileFormContainer from './components/newProfile/ProfileFormContainer';
 import LoginContainer from './components/logIn/LoginContainer';
-
+import ChatContainer from './components/chat/ChatContainer';
 
 
 class App extends Component {
@@ -24,7 +24,7 @@ class App extends Component {
       <ConnectedRouter history={history}>
         <div>
           <Navbar />
-
+          <Route path="/Chat" component={ChatContainer} />
           <Route exact path="/" component={Home} />
           <Route path="/SignIn" component={SignIn} />
           <Route path="/Profile" component={Profile} />
