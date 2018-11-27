@@ -17,7 +17,8 @@ class Chat extends Component {
             roomId: null,
             messages: [],
             joinableRooms: [],
-            joinedRooms: []
+            joinedRooms: [],
+            userId: 'amit'
         }
 
         this.sendMessage = this.sendMessage.bind(this)
@@ -116,6 +117,7 @@ class Chat extends Component {
                                 subscribeToRoom={this.subscribeToRoom}
                                 rooms={[...this.state.joinableRooms, ...this.state.joinedRooms]}
                                 roomId={this.state.roomId}
+                                sender={this.state.userId}
                             />
                         </div>
                     </div>
