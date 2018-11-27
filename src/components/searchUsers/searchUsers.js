@@ -35,7 +35,7 @@ class SearchUsers extends Component {
         return (
             <div>
 
-                <SearchBar /><br /><hr width="90%" />
+                <SearchBar /><br /><hr width="90%" /><br />
                 <div className="container search-pane">
 
                     <ul className="nav nav-tabs" id="myTab" role="tablist">

@@ -7,6 +7,8 @@ import Logo from '../assets/logos/roomm8-white-logo-cropped.png';
 class Navbar extends Component {
 
     render() {
+        let { user } = this.props.state;
+        
         return (
             <div>
                 <header>
@@ -20,16 +22,25 @@ class Navbar extends Component {
                                 <li className="nav-item active">
                                     <Link className="nav-link" to="/SearchUsers">Search</Link>
                                 </li>
-                                <li className="nav-item active">
-                                    <Link className="nav-link" to="/Profile">Profile</Link>
-                                </li>
                             </ul>
-
+                            {!user.info ?
                             <ul className="navbar-nav ml-auto">
                                 <li className="nav-item active">
-                                    <Link className="nav-link" to="/SignUp">Login</Link>
+                                    <Link className="nav-link" to="/SignUp">Sign Up</Link>
+                                </li>
+                                <li className="nav-item active">
+                                    <Link className="nav-link" to="/Login">Login</Link>
+                                </li>
+                            </ul> :
+                            <ul className="navbar-nav ml-auto">
+                                <li className="nav-item active">
+                                    <Link className="nav-link" to="/Profile">MyProfile</Link>
+                                </li>
+                                <li className="nav-item active">
+                                    <Link className="nav-link" to="/">Log out</Link>
                                 </li>
                             </ul>
+                            } 
                         </div>
                     </nav>
                 </header>
