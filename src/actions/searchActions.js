@@ -49,9 +49,9 @@ export function fetchUsers() {
                 }
             )
             .then(json => {
-                setTimeout(dispatch, 3000, requestUsersSuccess(json))
+                // setTimeout(dispatch, 3000, requestUsersSuccess(json))
                 console.log(json);
-                // dispatch(requestUsersSuccess(json))
+                dispatch(requestUsersSuccess(json))
             }
             )
             .catch(err => dispatch(requestUsersError(err)))
@@ -97,8 +97,9 @@ export function fetchProperties(lat, lon) {
         .then(function(response) {
             return response.json();
         }).then(function(data) {
-            setTimeout(dispatch, 3000, requestPropertiesSuccess(data))
-            // requestPropertiesSuccess(data)
+            console.log(data);
+            // setTimeout(dispatch, 3000, requestPropertiesSuccess(data))
+            dispatch(requestPropertiesSuccess(data));
         })
         .catch(err => dispatch(requestPropertiesError(err)))
     }
