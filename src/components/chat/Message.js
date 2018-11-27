@@ -2,7 +2,7 @@ import React from 'react'
 
 function Message(props) {
 
-    let outgoing = props.username === 'jimmy' ? true : false;
+    let outgoing = props.username === 'amit' ? true : false;
 
     let content;
 

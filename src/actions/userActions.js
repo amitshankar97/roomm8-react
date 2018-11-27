@@ -1,6 +1,6 @@
 import browserHistory from '../helpers/browserHistory';
 
-const BASE_URL = 'https://roomm8-amit.azurewebsites.net'
+// const BASE_URL = 'https://roomm8-amit.azurewebsites.net'
 
 export const USER_SIGNUP_SUCCESS = 'USER_SIGNUP_SUCCESS';
 

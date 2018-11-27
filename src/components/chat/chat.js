@@ -30,7 +30,7 @@ class Chat extends Component {
     componentDidMount() {
         const chatManager = new Chatkit.ChatManager({
             instanceLocator,
-            userId: 'jimmy',
+            userId: 'amit',
             tokenProvider: new Chatkit.TokenProvider({
                 url: tokenUrl
             })

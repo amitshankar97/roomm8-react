@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
 
 class RoomList extends Component {
     render () {
@@ -20,15 +19,6 @@ class RoomList extends Component {
                                     </div>
                                 </div>
                             </div>
-
-
-                            // <li key={room.id} className={"room " + active}>
-                            //     <a
-                            //         onClick={() => this.props.subscribeToRoom(room.id)}
-                            //         href="#">
-                            //         # {room.name}
-                            //     </a>
-                            // </li>
                         )
                     })}
             </div>

@@ -28,14 +28,13 @@ class App extends Component {
       <ConnectedRouter history={history}>
         <div>
           <Navbar />
-          <Route path="/Chat" component={ChatContainer} />
           <Route exact path="/" component={Home} />
           <Route path="/SignIn" component={SignIn} />
           <Route path="/Profile" component={Profile} />
           <Route path="/PropertyProfile/:propertyID" component={PropertyProfile} />
           <Route path="/SearchUsers" component={SearchUsers} />
 
-          <Route path="/Chat1" component={Chat} />
+          <Route path="/Chat" component={Chat} />
 
           <Route path="/SignUp" component={SignUpContainer} />
           <Route path="/SaveProperty" component={PropertyFormContainer} />

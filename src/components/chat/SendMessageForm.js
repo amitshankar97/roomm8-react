@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
 
 class SendMessageForm extends Component {
     constructor() {
@@ -31,7 +30,6 @@ class SendMessageForm extends Component {
                 <div className="input_msg_write">
                     <form
                         onSubmit={this.handleSubmit}
-                        // className="send-message-form"
                     >
                         <input
                             type="text"
@@ -45,17 +43,6 @@ class SendMessageForm extends Component {
                     </form>
                 </div>
             </div>
-
-            // <form
-            //     onSubmit={this.handleSubmit}
-            //     className="send-message-form">
-            //     <input
-            //         disabled={this.props.disabled}
-            //         onChange={this.handleChange}
-            //         value={this.state.message}
-            //         placeholder="Enter Message"
-            //         type="text" />
-            // </form>
         )
     }
 }
