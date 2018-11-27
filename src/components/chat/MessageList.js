@@ -19,21 +19,35 @@ class MessageList extends Component {
     render() {
         if (!this.props.roomId) {
             return (
-                <div className="message-list">
-                    <div className="join-room">
-                        &larr; Start Chatting
-                    </div>
+                <div className="msg_history">
                 </div>
             )
         }
         return (
-            <div className="message-list">
+
+
+
+            
+            <div className="msg_history">
+
                 {this.props.messages.map((message, index) => {
                     return (
                         <Message key={message.id} username={message.senderId} text={message.text} />
                     )
                 })}
+
             </div>
+
+
+
+
+            // <div className="message-list">
+            //     {this.props.messages.map((message, index) => {
+            //         return (
+            //             <Message key={message.id} username={message.senderId} text={message.text} />
+            //         )
+            //     })}
+            // </div>
         )
     }
 }

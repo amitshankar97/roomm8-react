@@ -13,7 +13,7 @@ import PropertyProfile from './components/propertyProfile/propertyProfile';
 import SignIn from './components/signIn/signIn';
 import SearchUsers from './components/searchUsers/searchUsers';
 
-import Chat from './components/profile/chat';
+import Chat from './components/chat/chat';
 
 import SignUpContainer from './components/signUp/SignUpContainer';
 import PropertyFormContainer from './components/newProperty/PropertyFormContainer';
@@ -36,7 +36,7 @@ class App extends Component {
           <Route path="/SearchUsers" component={SearchUsers} />
 
           <Route path="/Chat1" component={Chat} />
-          
+
           <Route path="/SignUp" component={SignUpContainer} />
           <Route path="/SaveProperty" component={PropertyFormContainer} />
           <Route path="/SaveProfile" component={ProfileFormContainer} />
