@@ -22,6 +22,12 @@ class Navbar extends Component {
                                 <li className="nav-item active">
                                     <Link className="nav-link" to="/SearchUsers">Search</Link>
                                 </li>
+                                <li className="nav-item active">
+                                    <Link className="nav-link" to="/Profile">Profile</Link>
+                                </li>
+                                <li className="nav-item active">
+                                    <Link className="nav-link" to="/Chat">Chat</Link>
+                                </li>
                             </ul>
                             {!user.info ?
                             <ul className="navbar-nav ml-auto">
