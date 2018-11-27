@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\actions",
+    "\\src\\assets",
+    "\\src\\components",
+    "\\src\\components\\dashboard",
+    "\\src\\components\\home",
+    "\\src\\components\\profile",
+    "\\src\\components\\propertyProfile",
+    "\\src\\components\\signIn"
+  ],
+  "SelectedNode": "\\src\\App.js",
+  "PreviewInSolutionExplorer": false
+}
