@@ -12,6 +12,7 @@ import Profile from './components/profile/profile';
 import PropertyProfile from './components/propertyProfile/propertyProfile';
 import SignIn from './components/signIn/signIn';
 import SearchUsers from './components/searchUsers/searchUsers';
+import Chat from './components/profile/chat';
 
 class App extends Component {
   render() {
@@ -26,6 +27,7 @@ class App extends Component {
           <Route path="/Profile" component={Profile} />
           <Route path="/PropertyProfile/:propertyID" component={PropertyProfile} />
           <Route path="/SearchUsers" component={SearchUsers} />
+          <Route path="/Chat" component={Chat} />
         </div>
       </Router>
     );
