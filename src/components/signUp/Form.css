@@ -1,0 +1,9 @@
+.col-md-offset-4{
+    margin: 0 auto;
+    padding-top: 2rem;
+    width:80% /* value of your choice which suits your alignment */
+}
+
+.help-block{
+    color: red;
+}
